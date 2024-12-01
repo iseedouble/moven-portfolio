@@ -19,20 +19,31 @@
         </div>
       </div>
       <div class="flex flex-wrap -mx-4">
-        <div class="px-4 md-plus:w-1/2 lg-plus:w-1/4">
-            <app-card></app-card>
-        </div>
-        <div class="px-4 md-plus:w-1/2 lg-plus:w-1/4">
-            <app-card></app-card>
-        </div>
-        <div class="px-4 md-plus:w-1/2 lg-plus:w-1/4">
-            <app-card></app-card>
-        </div>
-        <div class="px-4 md-plus:w-1/2 lg-plus:w-1/4">
-            <app-card></app-card>
-        </div>
+        <app-card
+          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          title="{{ cards[0].title }}"
+          description="{{ cards[0].description }}"
+          svgPath="{{ cards[0].svgPath }}"
+        ></app-card>
+        <app-card
+          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          title="{{ cards[1].title }}"
+          description="{{ cards[1].description }}"
+          svgPath="{{ cards[1].svgPath }}"
+        ></app-card>
+        <app-card
+          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          title="{{ cards[2].title }}"
+          description="{{ cards[2].description }}"
+          svgPath="{{ cards[2].svgPath }}"
+        ></app-card>
+        <app-card
+          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          title="{{ cards[3].title }}"
+          description="{{ cards[3].description }}"
+          svgPath="{{ cards[3].svgPath }}"
+        ></app-card>
       </div>
-      
     </div>
   </div>
 </section>

@@ -9,11 +9,12 @@ import {TranslateService} from "@ngx-translate/core";
 import { initFlowbite } from 'flowbite';
 import { HomeComponent } from "./component/home/home.component";
 import { AboutComponent } from './component/about/about.component';
+import { ProjectsComponent } from './component/projects/projects.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent, HomeComponent, AboutComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent, HomeComponent, AboutComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

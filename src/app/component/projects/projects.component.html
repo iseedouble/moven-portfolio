@@ -1,1 +1,103 @@
-<p>projects works!</p>
+<section id="projects">
+  <div class="xl-plus:max-w-[1320px] w-full mx-auto px-4">
+    <div class="pt-[120px]">
+      <div class="flex flex-wrap -mx-4">
+        <div class="text-center max-w-[600px] mb-[70px] mx-auto">
+          <span
+            class="text-daniel-jack-blue font-semibold text-lg leading-7 block mb-2"
+            >Creative Portfolios</span
+          >
+          <h2
+            class="sm:text-[45px] xs:text-2xl xs:leading-10 text-custom-dark-blue font-bold text-3xl leading-9 mb-5"
+          >
+            Recent Works
+          </h2>
+          <p class="text-custom-gray font-medium text-lg leading-7 m-0">
+            There are many variations of passages of Lorem Ipsum available but
+            the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+      <div class="px-4 w-full">
+        <div class="flex flex-wrap justify-center items-center mb-12">
+          <button
+            class="block py-2 px-5 sm:mx-2 mb-2 rounded-full text-sm leading-5 cursor-pointer hover:bg-custom-blue hover:text-white"
+            [class.bg-custom-blue]="activeButton === 'All'"
+            [class.text-white]="activeButton === 'All'"
+            [class.bg-transparent]="activeButton !== 'All'"
+            [class.text-gray-500]="activeButton !== 'All'"
+            [class.hover\:bg-custom-blue]="activeButton !== 'All'"
+            [class.hover\:text-white]="activeButton !== 'All'"
+            (click)="setActive('All')"
+          >
+            All
+          </button>
+          <button
+            class="block py-2 px-5 sm:mx-2 mb-2 rounded-full text-sm leading-5 cursor-pointer hover:bg-custom-blue hover:text-white"
+            [class.bg-custom-blue]="activeButton === 'Web Design'"
+            [class.text-white]="activeButton === 'Web Design'"
+            [class.bg-transparent]="activeButton !== 'Web Design'"
+            [class.text-gray-500]="activeButton !== 'Web Design'"
+            [class.hover\:bg-custom-blue]="activeButton !== 'Web Design'"
+            [class.hover\:text-white]="activeButton !== 'Web Design'"
+            (click)="setActive('Web Design')"
+          >
+            Web-Design
+          </button>
+          <button
+            class="block py-2 px-5 sm:mx-2 mb-2 rounded-full text-sm leading-5 cursor-pointer hover:bg-custom-blue hover:text-white"
+            [class.bg-custom-blue]="activeButton === 'Graphics'"
+            [class.text-white]="activeButton === 'Graphics'"
+            [class.bg-transparent]="activeButton !== 'Graphics'"
+            [class.text-gray-500]="activeButton !== 'Graphics'"
+            [class.hover\:bg-custom-blue]="activeButton !== 'Graphics'"
+            [class.hover\:text-white]="activeButton !== 'Graphics'"
+            (click)="setActive('Graphics')"
+          >
+            Graphics
+          </button>
+          <button
+            class="block py-2 px-5 sm:mx-2 mb-2 rounded-full text-sm leading-5 cursor-pointer hover:bg-custom-blue hover:text-white"
+            [class.bg-custom-blue]="activeButton === 'App'"
+            [class.text-white]="activeButton === 'App'"
+            [class.bg-transparent]="activeButton !== 'App'"
+            [class.text-gray-500]="activeButton !== 'App'"
+            [class.hover\:bg-custom-blue]="activeButton !== 'App'"
+            [class.hover\:text-white]="activeButton !== 'App'"
+            (click)="setActive('App')"
+          >
+            App
+          </button>
+        </div>
+      </div>
+      <div class="flex justify-center -mx-4">
+        <div class="w-full lg:w-10/12 px-4">
+          <app-card-project
+            [img]="cardProject[0].img"
+            title="{{ cardProject[0].title }}"
+            description="{{ cardProject[0].description }}"
+            [position]="cardProject[0].position"
+          ></app-card-project>
+          <app-card-project
+            [img]="cardProject[1].img"
+            title="{{ cardProject[1].title }}"
+            description="{{ cardProject[1].description }}"
+            [position]="cardProject[1].position"
+          ></app-card-project>
+          <app-card-project
+            [img]="cardProject[2].img"
+            title="{{ cardProject[2].title }}"
+            description="{{ cardProject[2].description }}"
+            [position]="cardProject[2].position"
+          ></app-card-project>
+          <app-card-project
+            [img]="cardProject[3].img"
+            title="{{ cardProject[3].title }}"
+            description="{{ cardProject[3].description }}"
+            [position]="cardProject[3].position"
+          ></app-card-project>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
