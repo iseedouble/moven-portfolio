@@ -7,11 +7,12 @@ import { ServicesComponent } from './component/services/services.component';
 import {TranslateModule} from "@ngx-translate/core";   // <--- standalone only
 import {TranslateService} from "@ngx-translate/core";
 import { initFlowbite } from 'flowbite';
+import { HomeComponent } from "./component/home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
