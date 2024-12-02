@@ -70,34 +70,44 @@
           </button>
         </div>
       </div>
-      <div class="flex justify-center -mx-4">
-        <div class="w-full lg:w-10/12 px-4">
-          <app-card-project
-            [img]="cardProject[0].img"
-            title="{{ cardProject[0].title }}"
-            description="{{ cardProject[0].description }}"
-            [position]="cardProject[0].position"
-          ></app-card-project>
-          <app-card-project
-            [img]="cardProject[1].img"
-            title="{{ cardProject[1].title }}"
-            description="{{ cardProject[1].description }}"
-            [position]="cardProject[1].position"
-          ></app-card-project>
-          <app-card-project
-            [img]="cardProject[2].img"
-            title="{{ cardProject[2].title }}"
-            description="{{ cardProject[2].description }}"
-            [position]="cardProject[2].position"
-          ></app-card-project>
-          <app-card-project
-            [img]="cardProject[3].img"
-            title="{{ cardProject[3].title }}"
-            description="{{ cardProject[3].description }}"
-            [position]="cardProject[3].position"
-          ></app-card-project>
-        </div>
-      </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4" [@listAnimation]>
+            <app-card-project
+              *ngIf="projectMap.get(activeButton)?.includes('project1')"
+              id="project1"
+              [@minimizeAndDisappear]
+              [img]="cardProject[0].img"
+              title="{{ cardProject[0].title }}"
+              description="{{ cardProject[0].description }}"
+              [position]="cardProject[0].position"
+            ></app-card-project>
+            <app-card-project
+              *ngIf="projectMap.get(activeButton)?.includes('project2')"
+              id="project2"
+              [@minimizeAndDisappear]
+              [img]="cardProject[1].img"
+              title="{{ cardProject[1].title }}"
+              description="{{ cardProject[1].description }}"
+              [position]="cardProject[1].position"
+            ></app-card-project>
+            <app-card-project
+              *ngIf="projectMap.get(activeButton)?.includes('project3')"
+              id="project3"
+              [@minimizeAndDisappear]
+              [img]="cardProject[2].img"
+              title="{{ cardProject[2].title }}"
+              description="{{ cardProject[2].description }}"
+              [position]="cardProject[2].position"
+            ></app-card-project>
+            <app-card-project
+              *ngIf="projectMap.get(activeButton)?.includes('project4')"
+              id="project4"
+              [@minimizeAndDisappear]
+              [img]="cardProject[3].img"
+              title="{{ cardProject[3].title }}"
+              description="{{ cardProject[3].description }}"
+              [position]="cardProject[3].position"
+            ></app-card-project>
+          </div>
     </div>
   </div>
 </section>
