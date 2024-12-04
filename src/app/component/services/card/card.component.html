@@ -1,5 +1,5 @@
     <div
-      class="group duration-200 shadow-custom text-center py-10 px-8 bg-white rounded-lg overflow-hidden mb-8 z-10 relative hover:bg-custom-blue"
+      class="group duration-200 shadow-custom text-center py-10 px-8 rounded-lg overflow-hidden mb-8 z-10 relative hover:bg-custom-blue"
     >
       <div
         class="flex items-center justify-center text-white bg-custom-blue rounded-full w-20 h-20 mb-6 mx-auto group-hover:bg-white"
@@ -15,19 +15,20 @@
       </div>
       <div class="mb-3">
         <h3
-          class="text-custom-dark-blue font-bold text-xl leading-9 group-hover:text-white"
+          class="text-color-1 font-bold text-xl leading-9"
         >
           {{title}}
         </h3>
       </div>
       <p
-        class="text-custom-gray font-medium text-sm m-0 group-hover:text-white"
+        class="text-color-3 font-medium text-sm m-0 group-hover:text-white"
       >
        {{description}}
       </p>
       <div>
         <span class="absolute top-0 right-0">
           <svg
+            class="hidden group-hover:block"
             width="218"
             height="109"
             viewBox="0 0 218 109"
@@ -46,6 +47,7 @@
         </span>
         <span class="absolute left-1 bottom-1">
           <svg
+            class="hidden group-hover:block"
             width="23"
             height="32"
             viewBox="0 0 23 32"

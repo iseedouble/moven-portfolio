@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-color-1: white;
+  --text-color-2: #2E9CCA;
+  --text-color-3: #AAABB8;
+  --color-4: #29648A;
+  --color-5: 37, 39, 77;
+  --color-6: #090e34;
+  --color-7: #050A44
+}
+
 .max-w-90 {
     max-width: 90rem;
   }

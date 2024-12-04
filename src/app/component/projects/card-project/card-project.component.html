@@ -1,13 +1,13 @@
 <div class="relative flex justify-center flex-wrap -mx-4">
   <div
-    class="px-4 sm:w-1/2"
-    [style.left]="this.position.left"
-    [style.top]="this.position.top"
-    style="position: absolute"
+    class="px-4 sm:w-1/2 w-full"
+    [style.left]="card.position.left"
+    [style.top]="card.position.top"
+    *ngFor="let card of cardProject"
   >
     <div class="mb-12">
       <div class="group shadow-lg rounded-md overflow-hidden mb-8 relative">
-        <img [src]="img" alt="image" class="w-full max-w-full" />
+        <img [src]="card.img" alt="image" class="w-full max-w-full" />
         <div
           class="transition ease-in-out duration-150 opacity-0 group-hover:opacity-100 bg-custom-blue bg-opacity-[17%] flex justify-center items-center w-full h-full absolute left-0 top-0"
         >
@@ -29,14 +29,14 @@
       </div>
       <h3 class="m-0 text-inherit font-inherit">
         <a
-          class="text-[rgb(9_14_52)] font-semibold text-xl leading-7 inline-block mb-3 no-underline hover:text-custom-blue"
+          class="text-color-1 font-semibold text-xl leading-7 inline-block mb-3 no-underline hover:text-custom-blue"
           href="#"
         >
-          {{ this.title }}
+          {{ card.title }}
         </a>
       </h3>
-      <p class="text-[rgb(149_156_177)] font-medium text-base leading-6 m-0">
-        {{ this.description }}
+      <p class="text-color-3 font-medium text-base leading-6 m-0">
+        {{ card.description }}
       </p>
     </div>
   </div>
