@@ -1,45 +1,49 @@
 <div class="relative flex justify-center flex-wrap -mx-4">
-  <div
-    class="px-4 sm:w-1/2 w-full"
-    [style.left]="card.position.left"
-    [style.top]="card.position.top"
-    *ngFor="let card of cardProject"
-  >
-    <div class="mb-12">
-      <div class="group shadow-lg rounded-md overflow-hidden mb-8 relative">
-        <img [src]="card.img" alt="image" class="w-full max-w-full" />
-        <div
-          class="transition ease-in-out duration-150 opacity-0 group-hover:opacity-100 bg-custom-blue bg-opacity-[17%] flex justify-center items-center w-full h-full absolute left-0 top-0"
-        >
+  <ng-container *ngFor="let card of cardProject; let i = index">
+    <div
+      id="project{{ i }}"
+      class="px-4 sm:w-1/2 w-full"
+      [style.left]="card.position.left"
+      [style.top]="card.position.top"
+      [@minimizeAndDisappear]
+      *ngIf="projectMap.get(activeButton)?.includes('project' + i)"
+    >
+      <div class="mb-12">
+        <div class="group shadow-lg rounded-md overflow-hidden mb-8 relative">
+          <img [src]="card.img" alt="image" class="w-full max-w-full" />
+          <div
+            class="transition ease-in-out duration-150 opacity-0 group-hover:opacity-100 bg-custom-blue bg-opacity-[17%] flex justify-center items-center w-full h-full absolute left-0 top-0"
+          >
+            <a
+              class="text-white bg-custom-blue rounded-full flex justify-center items-center w-10 h-10 no-underline"
+              href="#"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="white"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="m-0 text-inherit font-inherit">
           <a
-            class="text-white bg-custom-blue rounded-full flex justify-center items-center w-10 h-10 no-underline"
+            class="text-color-1 font-semibold text-xl leading-7 inline-block mb-3 no-underline hover:text-custom-blue"
             href="#"
           >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="white"></path>
-            </svg>
+            {{ card.title }}
           </a>
-        </div>
+        </h3>
+        <p class="text-color-3 font-medium text-base leading-6 m-0">
+          {{ card.description }}
+        </p>
       </div>
-      <h3 class="m-0 text-inherit font-inherit">
-        <a
-          class="text-color-1 font-semibold text-xl leading-7 inline-block mb-3 no-underline hover:text-custom-blue"
-          href="#"
-        >
-          {{ card.title }}
-        </a>
-      </h3>
-      <p class="text-color-3 font-medium text-base leading-6 m-0">
-        {{ card.description }}
-      </p>
     </div>
-  </div>
+  </ng-container>
   <h3 class="m-0 text-inherit font-inherit">
     <a
       class="text-[rgb(9_14_52)] font-semibold text-xl leading-7 inline-block mb-3 no-underline hover:text-custom-blue"
