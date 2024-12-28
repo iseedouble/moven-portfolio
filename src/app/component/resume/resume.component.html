@@ -1,0 +1,66 @@
+<section id="services" class="bg-color-5">
+  <div class="max-w-screen-xl w-full mx-auto px-4">
+    <div class="pt-32 pb-16">
+      <div class="flex flex-wrap -mx-4">
+        <div class="text-center max-w-[600px] mb-[70px] mx-auto">
+          <span
+            class="text-color-2 font-semibold text-lg leading-7 block mb-2"
+            >{{ "resume.title" | translate }}</span
+          >
+          <h2
+            class="sm:text-[45px] xs:text-2xl xs:leading-10 text-color-1 font-bold text-3xl leading-9 mb-5"
+          >
+            {{ "resume.title2" | translate }}
+          </h2>
+          <p class="text-color-3 font-medium text-lg leading-7 m-0">
+            {{ "resume.description" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="pt-12 relative">
+        <span
+          class="absolute top-0 left-2 bg-[#d7dfff] w-px h-full block md:left-1/2"
+        ></span>
+        <app-resume-section
+          [isLeftSection]="true"
+          title="Full Stack Developer"
+          title2="Desjardins | Montreal"
+          description="Developed and optimized frontend features using Angular and web components, while building scalable microservices with Spring Boot to enhance overall functionality."
+          date="May 2021 – Present"
+        ></app-resume-section>
+
+        <app-resume-section
+          [isLeftSection]="false"
+          title="Bachelor Degree Computer Engineering"
+          title2="Polytechnique Montreal | Canada"
+          description="Earned a Bachelor’s degree in Computer Engineering, focusing on software development, system design, and hands-on implementation of advanced technologies."
+          date="2016 – 2021"
+        ></app-resume-section>
+
+        <app-resume-section
+          [isLeftSection]="true"
+          title="Full Stack Developer Intern"
+          title2="National Bank of Canada | Montreal"
+          description="Automated application creation processes by designing a REST server using Node.js and Python. Enhanced server security with OAuth2 protocols while adhering to industry best practices."
+          date="2020"
+        ></app-resume-section>
+
+        <app-resume-section
+          [isLeftSection]="false"
+          title="C++ Software Developer Intern"
+          title2="Dental Wings | Montreal"
+          description="Enhanced and refined source code to assess performance and quality, employing optimization techniques."
+          date="2019"
+        ></app-resume-section>
+
+        <app-resume-section
+        [isLeftSection]="true"
+        title="Integration Specialist  Intern"
+        title2="CAE | Montreal"
+        description="Optimized flight simulator software and designed a functional regulator using Arduino components for improved performance and usability."
+        date="2018"
+      ></app-resume-section>
+      </div>
+    </div>
+  </div>
+</section>

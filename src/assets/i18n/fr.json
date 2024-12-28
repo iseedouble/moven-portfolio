@@ -2,5 +2,10 @@
     "title": "Mon Moven Labs",
     "services": {
         "title": "Nos services"
+    },
+    "resume": {
+        "title": "Education & Experience",
+        "title2": "My Resume",
+        "description": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
     }
 }

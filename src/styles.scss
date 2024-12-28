@@ -13,5 +13,8 @@
 }
 
 .max-w-90 {
-    max-width: 90rem;
-  }
+  max-width: 90rem;
+}
+html, body {
+  overflow-x: hidden;
+}

@@ -1,10 +1,9 @@
 <section id="services" class="bg-color-5">
   <div class="max-w-screen-xl w-full mx-auto px-4">
-    <div class="pt-20">
+    <div class="pt-32 pb-16">
       <div class="flex flex-wrap -mx-4">
         <div class="text-center max-w-[600px] mb-[70px] mx-auto">
-          <span
-            class="text-color-2 font-semibold text-lg leading-7 block mb-2"
+          <span class="text-color-2 font-semibold text-lg leading-7 block mb-2"
             >What we offer?</span
           >
           <h2
@@ -13,32 +12,33 @@
             {{ "services.title" | translate }}
           </h2>
           <p class="text-color-3 font-medium text-lg leading-7 m-0">
-            There are many variations of passages of Lorem Ipsum available but
-            the majority have suffered alteration in some form.
+            We offer a range of custom software engineering solutions tailored
+            to your needs:
           </p>
         </div>
       </div>
-      <div class="flex flex-wrap -mx-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+        <!-- Child cards: add h-full -->
         <app-card
-          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          class="flex flex-col h-full p-4"
           title="{{ cards[0].title }}"
           description="{{ cards[0].description }}"
           svgPath="{{ cards[0].svgPath }}"
         ></app-card>
         <app-card
-          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          class="flex flex-col h-full p-4"
           title="{{ cards[1].title }}"
           description="{{ cards[1].description }}"
           svgPath="{{ cards[1].svgPath }}"
         ></app-card>
         <app-card
-          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          class="flex flex-col h-full p-4"
           title="{{ cards[2].title }}"
           description="{{ cards[2].description }}"
           svgPath="{{ cards[2].svgPath }}"
         ></app-card>
         <app-card
-          class="px-4 md-plus:w-1/2 lg-plus:w-1/4"
+          class="flex flex-col h-full p-4"
           title="{{ cards[3].title }}"
           description="{{ cards[3].description }}"
           svgPath="{{ cards[3].svgPath }}"

@@ -52,9 +52,9 @@ export class CardProjectComponent {
   cardProject = [
     {
       img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-01.jpg',
-      title: 'Startup landing page',
+      title: 'MovensLabs',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitaedolor ultrices libero.',
+        'A crypto website to create custom Solana coins effortlessly.',
       position: {
         top: '0px',
         bottom: '0px',
@@ -64,9 +64,9 @@ export class CardProjectComponent {
     },
     {
       img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-02.jpg',
-      title: 'Job portal landing page',
+      title: 'PC Builder',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitaedolor ultrices libero.',
+        'An AI-powered web scraper that generates PC-partpicker links for tailored PC builds.',
       position: {
         top: '0px',
         bottom: '0px',
@@ -76,9 +76,9 @@ export class CardProjectComponent {
     },
     {
       img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-03.jpg',
-      title: 'SaaS landing page',
+      title: 'Telegram Crypto Bot',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitaedolor ultrices libero.',
+        'A suite of bots for Solana trading, coin tracking, and scheduling tasks.',
       position: {
         top: '458.949px',
         bottom: '0px',
@@ -88,9 +88,9 @@ export class CardProjectComponent {
     },
     {
       img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-04.jpg',
-      title: 'Business & corporate template',
+      title: 'Discord Flight Scraper',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitaedolor ultrices libero.',
+        'Automated tools to fetch real-time flight data from the United Airlines website.',
       position: {
         top: '458.949px',
         bottom: '0px',
@@ -103,8 +103,8 @@ export class CardProjectComponent {
   public projectMap: Map<string, string[]> = new Map([
     ['All', ['project0', 'project1', 'project2', 'project3']],
     ['Web Design', ['project0', 'project1', 'project2']],
-    ['Graphics', ['project0', 'project2']],
-    ['App', ['project0', 'project3']],
+    ['Crypto', ['project0', 'project2']],
+    ['AI', ['project0', 'project3']],
   ]);
 
   constructor() {}

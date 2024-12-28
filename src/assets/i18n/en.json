@@ -2,5 +2,10 @@
     "title": "My Moven Labs",
     "services": {
         "title": "Our services"
+    },
+    "resume": {
+        "title": "Education & Experience",
+        "title2": "My Resume",
+        "description": "Explore my journey as a Full Stack Developer, showcasing my academic background and professional experience."
     }
 }
