@@ -1,11 +1,10 @@
-<div class="relative flex justify-center flex-wrap -mx-4">
+<div class="relative flex justify-start flex-wrap -mx-4">
   <ng-container *ngFor="let card of cardProject; let i = index">
     <div
       id="project{{ i }}"
       class="px-4 sm:w-1/2 w-full"
       [style.left]="card.position.left"
       [style.top]="card.position.top"
-      [@minimizeAndDisappear]
       *ngIf="projectMap.get(activeButton)?.includes('project' + i)"
     >
       <div class="mb-12">
