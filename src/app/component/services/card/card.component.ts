@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -16,8 +16,9 @@ export class CardComponent {
   @Input() svgPath!: string;
   @Input() title!: string;
   @Input() description!: string;
+  @Input() scaleValue!: number;
+  @Input() viewboxValue!: string;
 
   constructor(private translate: TranslateService) {
-
   }
 }

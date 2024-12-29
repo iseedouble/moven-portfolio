@@ -8,7 +8,8 @@
       class="fill-current block align-middle group-hover:fill-custom-blue"
       width="35"
       height="33"
-      viewBox="0 0 35 33"
+      [attr.viewBox]="viewboxValue"
+      transform="scale(1.2)"
     >
       <path [attr.d]="svgPath"></path>
     </svg>
