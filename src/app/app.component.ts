@@ -1,6 +1,6 @@
 import { Component, Inject  } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { ServicesComponent } from './component/services/services.component';
 
@@ -16,7 +16,7 @@ import { ResumeComponent } from './component/resume/resume.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent, HomeComponent, AboutComponent, ProjectsComponent, FooterComponent, ResumeComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, TranslateModule, ServicesComponent, HomeComponent, AboutComponent, ProjectsComponent, FooterComponent, ResumeComponent, RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

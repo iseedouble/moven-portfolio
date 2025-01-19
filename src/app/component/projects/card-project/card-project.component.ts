@@ -1,19 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Position } from '../../../model/position';
 import { CommonModule } from '@angular/common';
-import {
-  trigger,
-  transition,
-  style,
-  animate,
-  keyframes,
-  AnimationEvent,
-} from '@angular/animations';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { SharedDataServiceService } from '../../../service/shared-data-service.service';
 
 @Component({
   selector: 'app-card-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink ],
   templateUrl: './card-project.component.html',
   styleUrl: './card-project.component.scss'
 })
@@ -28,8 +22,16 @@ export class CardProjectComponent {
     {
       img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-01.jpg',
       title: 'MovensLabs',
+      secondTitle: 'A Solana Token Creator',
       description:
         'A crypto website to create custom Solana coins effortlessly.',
+      longDescription:'The Moven Solana Token Creator offers a streamlined, professional solution for creating and customizing SPL tokens on the Solana blockchain. Designed to accommodate both beginners and experienced developers, this intuitive platform enables users to launch tokens quickly and efficiently, without the need for technical expertise.', 
+      projectInfo: {
+        category: '',
+        date: '',
+        tags: '',
+        website: 'https://movenlabs.com/'
+      },
       position: {
         top: '0px',
         bottom: '0px',
@@ -54,6 +56,7 @@ export class CardProjectComponent {
       title: 'Telegram Crypto Bot',
       description:
         'A suite of bots for Solana trading, coin tracking, and scheduling tasks.',
+      longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper proin libero nunc consequat interdum varius. Quam pellentesque nec nam.',
       position: {
         top: '458.949px',
         bottom: '0px',
@@ -82,5 +85,10 @@ export class CardProjectComponent {
     ['AI', ['project0', 'project3']],
   ]);
 
-  constructor() {}
+  constructor(private sharedDataService: SharedDataServiceService, private router: Router) {}
+
+  debugCard(card: any) {
+    this.sharedDataService.setData(card);
+    this.router.navigate(['/project-details']);   
+  }
 }
