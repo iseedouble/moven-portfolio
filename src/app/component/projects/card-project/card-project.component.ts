@@ -20,7 +20,7 @@ export class CardProjectComponent {
 
   cardProject = [
     {
-      img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-01.jpg',
+      img: '../../../../assets/img/movenlabs.png',
       title: 'MovensLabs',
       secondTitle: 'A Solana Token Creator',
       description:
@@ -40,7 +40,7 @@ export class CardProjectComponent {
       },
     },
     {
-      img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-02.jpg',
+      img: '../../../../assets/img/moven-pc-builder.png',
       title: 'PC Builder',
       description:
         'An AI-powered web scraper that generates PC-partpicker links for tailored PC builds.',
@@ -65,7 +65,7 @@ export class CardProjectComponent {
       },
     },
     {
-      img: 'https://portfolio-tailwind.preview.uideck.com/demos/personal/images/portfolio-04.jpg',
+      img: '../../../../assets/img/moven-flights.gif',
       title: 'Discord Flight Scraper',
       description:
         'Automated tools to fetch real-time flight data from the United Airlines website.',
